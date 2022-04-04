@@ -6,11 +6,8 @@ import { EntriesContext } from "../../context/entries";
 import { UIContext } from "../../context/ui";
 
 export const NewEntry = () => {
-
-  const {addNewEntry} = useContext(EntriesContext);
-  const {isAddingEntry, setIsAddingEntry} = useContext(UIContext);
-
-  
+  const { addNewEntry } = useContext(EntriesContext);
+  const { isAddingEntry, setIsAddingEntry } = useContext(UIContext);
 
   const [inputValue, setInputValue] = useState("");
 
@@ -26,7 +23,7 @@ export const NewEntry = () => {
     addNewEntry(inputValue);
     setIsAddingEntry(false);
     setTouched(false);
-    setInputValue('');
+    setInputValue("");
   };
 
   return (

@@ -6,8 +6,9 @@ interface ContextProps {
 
      //Methods
      addNewEntry: (description: string) => void
-     updateEntry: (entry: Entry) => void
+     updateEntry: (entry: Entry, showSnackbar?:boolean) => void
      refreshEntry: () => Promise<void>
+     deleteEntry: (entry: Entry, showSnackbar?:boolean) => void
 
 }
 
